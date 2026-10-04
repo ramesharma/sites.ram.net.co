@@ -3,7 +3,7 @@ name: publish-site-artifact
 description: Publish a static site artifact — a self-contained report or guide page — to the static-site dumpyard. Use when asked to publish, upload, or add a static page artifact.
 ---
 
-# Publish to sites.arnavg.in
+# Publish to sites.ramesh.net.co
 
 Static-site dumpyard by Ramesh Sharma. Repo `ramesharma/sites.ram.net.co`, branch `main`, served from root at https://sites.ram.net.co.
 
