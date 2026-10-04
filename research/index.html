@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J2YR2RVR6L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J2YR2RVR6L');
-</script> -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>/research/ — sites.ram.net.co</title>
-<meta name="description" content="LLM-generated research reports.">
-<style>
-  html { background: #fff; color: #111; }
-  body { max-width: 38rem; margin: 4rem auto; padding: 0 1.25rem;
-         font: 1rem/1.6 Georgia, 'Times New Roman', serif; }
-  h1 { font-size: 1.5rem; font-weight: normal; margin: 0 0 0.25rem; }
-  hr { border: 0; border-top: 1px solid #111; margin: 1.5rem 0; }
-  a { color: #111; }
-  .meta { font-style: italic; }
-  ul { padding-left: 1.25rem; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>/research/ — sites.ram.net.co</title>
+  <meta name="description" content="LLM-generated research reports.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design-system/main.css">
 </head>
 <body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero__monogram">[ RS ]</div>
+      <h1 class="hero__name">/research/</h1>
+      <p class="hero__tagline">LLM-generated research reports.</p>
+    </div>
+  </header>
 
-<h1>/research/</h1>
-<p class="meta">Reports. <a href="/">Home</a>.</p>
+  <main>
+    <section class="section">
+      <div class="container">
+        <ul class="listing">
+          <li class="listing__item">
+            <a class="listing__link" href="/research/agent-golf/">Agent Golf — Evaluation & Backend Plan</a>
+            <span class="listing__meta">report</span>
+          </li>
+          <li class="listing__item">
+            <a class="listing__link" href="/research/ai-agent-sandbox-providers-2026/">AI Agent Sandbox Providers — 2026 comparison</a>
+            <span class="listing__meta">report</span>
+          </li>
+          <li class="listing__item">
+            <a class="listing__link" href="/research/london-wework-commute/">London WeWorks · from Wembley Park</a>
+            <span class="listing__meta">report</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-<hr>
-
-<ul>
-  <!-- one <li> per report: <li><a href="/research/slug/">Title</a></li> 
-  <li><a href="/research/agent-golf/">Agent Golf — Evaluation &amp; Backend Plan</a></li>
-  <li><a href="/research/ai-agent-sandbox-providers-2026/">AI Agent Sandbox Providers — 2026 comparison</a></li>
-  <li><a href="/research/london-wework-commute/">London WeWorks · from Wembley Park</a></li> -->
-</ul>
-
+  <footer class="footer">
+    <div class="container">
+      <p>No trackers. No frameworks. Just HTML.</p>
+      <p style="margin-top: var(--space-3); font-style: italic;">
+        <a href="/">← Home</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,49 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J2YR2RVR6L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J2YR2RVR6L');
-</script> -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>/learning/ — sites.ram.net.co</title>
-<meta name="description" content="LLM-generated learning guides.">
-<style>
-  html { background: #fff; color: #111; }
-  body { max-width: 38rem; margin: 4rem auto; padding: 0 1.25rem;
-         font: 1rem/1.6 Georgia, 'Times New Roman', serif; }
-  h1 { font-size: 1.5rem; font-weight: normal; margin: 0 0 0.25rem; }
-  hr { border: 0; border-top: 1px solid #111; margin: 1.5rem 0; }
-  a { color: #111; }
-  .meta { font-style: italic; }
-  ul { padding-left: 1.25rem; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>/learning/ — sites.ram.net.co</title>
+  <meta name="description" content="LLM-generated learning guides.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design-system/main.css">
 </head>
 <body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero__monogram">[ RS ]</div>
+      <h1 class="hero__name">/learning/</h1>
+      <p class="hero__tagline">LLM-generated learning guides.</p>
+    </div>
+  </header>
 
-<h1>/learning/</h1>
-<p class="meta">Guides. <a href="/">Home</a>.</p>
+  <main>
+    <section class="section">
+      <div class="container">
+        <ul class="listing">
+          <li class="listing__item">
+            <a class="listing__link" href="/learning/building-your-coding-harness/">Building Your Coding Harness</a>
+            <span class="listing__meta">guide</span>
+          </li>
+          <li class="listing__item">
+            <a class="listing__link" href="/learning/ceph-zfs-bare-metal-storage/">Ceph + ZFS on Bare Metal, Explained Like You're Five</a>
+            <span class="listing__meta">guide</span>
+          </li>
+          <li class="listing__item">
+            <a class="listing__link" href="/learning/cloud-coding-agents/">Why Your Coding Agent Needs a Cloud</a>
+            <span class="listing__meta">guide</span>
+          </li>
+          <li class="listing__item">
+            <a class="listing__link" href="/learning/coding-harness-in-15-min/">Building Your Coding Harness (15-min cut)</a>
+            <span class="listing__meta">guide</span>
+          </li>
+          <li class="listing__item">
+            <a class="listing__link" href="/learning/compose-to-production/">From docker compose to production — Terraform, Ansible, Helm, Argo CD</a>
+            <span class="listing__meta">guide</span>
+          </li>
+          <li class="listing__item">
+            <a class="listing__link" href="/learning/filesystems-from-blocks-to-fuse/">The Filesystem Workshop — From blocks to FUSE</a>
+            <span class="listing__meta">guide</span>
+          </li>
+          <li class="listing__item">
+            <a class="listing__link" href="/learning/personal-subdomain/">Set up a personal subdomain for agent artifacts</a>
+            <span class="listing__meta">guide</span>
+          </li>
+          <li class="listing__item">
+            <a class="listing__link" href="/learning/pi-extensions/">Pi extensions — the harness is yours</a>
+            <span class="listing__meta">guide</span>
+          </li>
+          <li class="listing__item">
+            <a class="listing__link" href="/learning/pi-skill-picker/">Less catalog. More context. — Pi Skill Picker</a>
+            <span class="listing__meta">guide</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-<hr>
-
-<ul>
-  <!-- one <li> per guide: <li><a href="/learning/slug/">Title</a></li> 
-  <li><a href="/learning/building-your-coding-harness/">Building Your Coding Harness</a></li>
-  <li><a href="/learning/ceph-zfs-bare-metal-storage/">Ceph + ZFS on Bare Metal, Explained Like You&#x27;re Five</a></li>
-  <li><a href="/learning/cloud-coding-agents/">Why Your Coding Agent Needs a Cloud</a></li>
-  <li><a href="/learning/coding-harness-in-15-min/">Building Your Coding Harness (15-min cut)</a></li>
-  <li><a href="/learning/compose-to-production/">From docker compose to production — Terraform, Ansible, Helm, Argo CD</a></li>
-  <li><a href="/learning/filesystems-from-blocks-to-fuse/">The Filesystem Workshop — From blocks to FUSE</a></li>
-  <li><a href="/learning/personal-subdomain/">Set up a personal subdomain for agent artifacts</a></li>
-  <li><a href="/learning/pi-extensions/">Pi extensions — the harness is yours</a></li>
-  <li><a href="/learning/pi-skill-picker/">Less catalog. More context. — Pi Skill Picker</a></li> -->
-</ul>
-
+  <footer class="footer">
+    <div class="container">
+      <p>No trackers. No frameworks. Just HTML.</p>
+      <p style="margin-top: var(--space-3); font-style: italic;">
+        <a href="/">← Home</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
