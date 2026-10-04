@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello World — sites.ram.net.co</title>
+  <meta name="description" content="A dummy learning page to test the design system.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design-system/main.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero__monogram">[ RS ]</div>
+      <h1 class="hero__name">Hello World</h1>
+      <p class="hero__tagline">A dummy learning page to verify the design system works.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2 class="section__heading"><span class="eyebrow">Content</span></h2>
+        <div class="prose">
+          <p>This page was created to test that the shared design system works correctly for new learning pages.</p>
+          <p>If you can see this with the Inter font, JetBrains Mono for metadata, proper spacing, and the hero section styling, the design system is working correctly.</p>
+          <p>Key elements being tested:</p>
+          <ul>
+            <li>Hero section with monogram, name, and tagline</li>
+            <li>Section with eyebrow label</li>
+            <li>Prose content with proper typography</li>
+            <li>Footer with mono text</li>
+          </ul>
+          <p>The page uses <code>/design-system/main.css</code> which imports tokens, base, and components from the shared design system.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>No trackers. No frameworks. Just HTML.</p>
+      <p style="margin-top: var(--space-3); font-style: italic;">
+        <a href="/learning/">← Back to Learning</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
