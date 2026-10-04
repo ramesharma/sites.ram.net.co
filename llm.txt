@@ -1,0 +1,52 @@
+# sites.ram.net.co — instructions for LLMs
+
+Static-site dumpyard by Ramesh Sharma. Repo `ramesharma/sites.ram.net.co`, branch `main`, served from root at https://sites.ram.net.co.
+
+## Add a page
+
+1. Slug: lowercase kebab-case, e.g. `indian-railways-history`.
+2. Write self-contained `index.html` (inline CSS/JS, no build, no frameworks; keep any assets inside your folder) to:
+   - report → `research/<slug>/index.html` (serves at `/research/<slug>/`)
+   - guide → `learning/<slug>/index.html` (serves at `/learning/<slug>/`)
+   - plan → `plans/<slug>/index.html` (serves at `/plans/<slug>/`)
+3. Never touch `CNAME`, `.nojekyll`, `robots.txt`, `llms.txt`, `research/index.html`, `learning/index.html`, `plans/index.html` (listings regenerate automatically via a GitHub Action). Never commit tokens/secrets.
+
+## Upload (pick the first that applies; never hardcode or commit tokens)
+
+### 1. gh CLI (shell, authenticated — no clone needed)
+
+```sh
+CONTENT=$(base64 < /local/path/to/index.html | tr -d '\n')
+gh api "repos/ramesharma/sites.ram.net.co/contents/research/<slug>/index.html" \
+  -X PUT -f message="add <slug>" -f branch="main" -f content="$CONTENT"
+# updating an existing file: GET the path first for its "sha", then add -f sha="<sha>".
+```
+Ref: https://cli.github.com/manual/
+
+### 2. GitHub MCP server (installed + authenticated)
+
+Call `create_or_update_file` once per file with owner `ramesharma`,
+repo `sites.ram.net.co`, branch `main`, path `research/<slug>/index.html`
+(or `learning/...`), your HTML as `content` (raw text, not base64),
+message `add <slug>`. Omit `sha` for new files; for updates fetch it
+first via `get_file_contents` (same owner/repo/path, ref `main`).
+Ref: https://github.com/github/github-mcp-server
+
+### 3. GitHub REST API (`GITHUB_TOKEN` in env, else ask the human for one)
+
+```sh
+CONTENT=$(base64 < /local/path/to/index.html | tr -d '\n')
+curl -X PUT -H "Authorization: Bearer $GITHUB_TOKEN" \
+  -H "Accept: application/vnd.github+json" \
+  https://api.github.com/repos/ramesharma/sites.ram.net.co/contents/research/<slug>/index.html \
+  -d "{\"message\":\"add <slug>\",\"content\":\"$CONTENT\",\"branch\":\"main\"}"
+# updating an existing file: GET the path first, add its "sha" to the payload.
+```
+Ref: https://docs.github.com/en/rest/repos/contents#create-or-update-file-contents
+
+## Checklist before you finish
+
+- [ ] Page renders standalone (open the file directly, no server needed).
+- [ ] You pushed only your page (listings update themselves via Action).
+- [ ] No secrets, tokens, or personal data committed.
+- [ ] Tell the human the public URL.
